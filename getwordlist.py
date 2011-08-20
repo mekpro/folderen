@@ -14,6 +14,15 @@ def uniquify(mylist):
   newlist.sort()
   return newlist
 
+def wordcount(mylist):
+  mydict = dict()
+  for i in mylist:
+    if i in mydict:
+      mydict[i] += 1
+    else:
+      mydict[i] = 1 
+  return mydict
+
 def filtering(mylist):
   return mylist
 
@@ -26,8 +35,9 @@ for line in lines:
     word = word.replace(']','')
     mylist.append(word)
 
-mylist = uniquify(mylist)
-mylist = filtering(mylist)
+#mylist = uniquify(mylist)
+mylist = wordcount(mylist)
+#mylist = filtering(mylist)
 
-for w in mylist:
-  print w
+for key,value in mylist.items():
+  print str(value) + " : " + key 
