@@ -3,6 +3,10 @@
 import re
 from mydict import mydict
 
+def progressBenchmark():
+  #todo: count translated word percentages by all japanese words
+  print "progress = 0"
+
 def getSource(filename):
   f = open(filename,'r')
   source = f.readlines()  
@@ -17,7 +21,7 @@ def translate(before,thedict):
   return after
 
 if __name__ == '__main__' :
-  source = getSource('input.txt')
+  source = getSource('full_input.txt')
   for before in source:
     after = translate(before,mydict)
-    print before + " : " + after
+    print before,after

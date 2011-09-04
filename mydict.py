@@ -11,6 +11,26 @@ mydict = {
 'ヤングジャンプ':'Young Jump',
 'ビッグコミックスピリッツ':'Big Comic Spirits',
 'プレイボーイ':'Weekly Playboy WPB',
-'ヤングジャンプ':'Young Jump'
+'ヤングジャンプ':'Young Jump',
+#top 20
+'熊田曜子':'Yoko Kumada',
+'西田麻衣':'Mai Nishida',
+'小嶋陽菜':'Haruna Kojima',
+'山本梓':'Asuza Yamamoto',
+'现役女子高生':'',
+'私立Bejean女学館':'Bejean Online',
+'逢沢りな':'Rina Aizawa',
+'大島優子':'Yuko Oshima',
+'杉原杏璃':'Anri Sugihara',
+'柏木由紀':'Yuki Kashiwagi',
+'ヤングアニマル':'Young Animal',
+'篠崎愛':'Ai Shinozaki',
+'原幹恵':'Mikie Hara',
+'プレイボーイ':'Weekly Playboy',
+'ヤングジャンプ':'Young Jump',
+'他':'Him',
+'佐山彩香':'Ayaka Sayama',
+'ビッグコミックスピリッツ':'Big Comic Spirits',
+'匿名写真':'ROSI.CC',
+'吉木りさ':'Risa Yoshiki',
 }
-

@@ -33,7 +33,7 @@ def getUnicodeName(w):
   return UnicodeName
 
 def filtering(mylist):
-  #todo: get only japanese text!
+  #todo: extract from the whole word, not just 1st char !
   newlist = []
   for w in mylist:
     un = getUnicodeName(w)
