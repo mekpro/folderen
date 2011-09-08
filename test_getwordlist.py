@@ -13,6 +13,10 @@ class test_getwordlist(unittest.TestCase):
     lines = getSource('input.txt')
     self.assertEqual(len(lines),7,"invalid input reader") 
 
+  def test_wordcut(self):
+    words = wordcut("[a] b")
+    self.assertEqual(words,["a","b"],"invalid wordcut")
+
   def test_uniquify(self):
     mylist = [1,1,1,2,2,3]
     newlist = uniquify(mylist)
