@@ -25,6 +25,7 @@ def wordcut(line):
   for word in words:
     w = word.replace('[','')
     w = w.replace(']','')
+    w = w.strip()
     wordlist.append(w)
   return wordlist
 
@@ -58,14 +59,18 @@ def filtering(mylist):
       newlist.append(w)
   return newlist 
 
-def write_result(mylist,mydict):
+def write_result(mylist,mydict,output_file):
+  import sys
   os.popen('rm ' + output_file)
   for word,count in mylist.items():
     word = word.encode('utf-8')
     if (word in mydict):
-      print >>open(output_file, 'a'), count , ":", word, " : ", mydict[word]
+      line = str(count)+":"+word+":"+mydict[word]
+      print >>open(output_file, 'a'),line 
     else:
-      print >>open(output_file, 'a'), count , ":", word, ":"
+      line = str(count)+":"+word+":"
+      print >>open(output_file, 'a'),line
+
 
 def showProgress(mylist,mydict):
   translated_word = 0
@@ -81,7 +86,7 @@ def showProgress(mylist,mydict):
       translated_dict += 1 
     else:
       total_word += count
-      total_dict+= 1 
+      total_dict += 1 
   percent_word = float(float(translated_word)/float(total_word))*100
   percent_dict = float(float(translated_dict)/float(total_dict))*100
   print "Total translated word: " ,translated_word,"/", total_word, "(",percent_word,"%)"
@@ -101,5 +106,5 @@ if __name__ == '__main__':
 
   mylist = filtering(mylist)
   mylist = wordcount(mylist)
-  write_result(mylist,mydict)
+  write_result(mylist,mydict,output_file)
   showProgress(mylist,mydict)

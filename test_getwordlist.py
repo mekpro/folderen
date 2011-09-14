@@ -1,5 +1,7 @@
 import nose
 import unittest 
+import sys
+import os
 from getwordlist import * 
 
 class test_getwordlist(unittest.TestCase):
@@ -34,3 +36,16 @@ class test_getwordlist(unittest.TestCase):
     unicodeName = getUnicodeName(w)
     self.assertEqual(unicodeName,'LATIN', "invalid unicodeName")
     pass
+
+  def test_write_result(self):
+    mydict = {'a' : 'x','b' : 'y'}
+    mylist = {'a' : 1, 'b' : 2 }
+    output_file = "test_output.txt"
+    write_result(mylist,mydict,output_file)
+    f = open(output_file)
+    line1 = f.readline()
+    self.assertEqual(line1,"1:a:x","invalid line1 "+line1+"!= 1:a:x")
+    line2 = f.readline()
+    self.assertEqual(line2,"2:b:y","invalid line1")
+
+  
