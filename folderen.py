@@ -24,4 +24,4 @@ if __name__ == '__main__' :
   source = getSource('full_input.txt')
   for before in source:
     after = translate(before,mydict)
-    print before,after
+    print after
